@@ -1,0 +1,2 @@
+Tutorial Authentication theo kiểu thuần, không cần dùng library NextAuth:
+    - https://www.youtube.com/watch?v=An20zqBLJvU

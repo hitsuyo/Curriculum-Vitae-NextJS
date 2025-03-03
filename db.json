@@ -1,0 +1,73 @@
+{
+    "json-server": [
+        {
+            "cmd": "npx json-server --watch db.json --p 3001"
+        }
+    ],
+    "account-me": [
+        {
+            "name": "Peter"
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "name": "id labore ex et quam laborum",
+            "email": "Eliseo@gardner.biz"
+        },
+        {
+            "id": 2,
+            "name": "quo vero reiciendis velit similique earum",
+            "email": "Jayne_Kuhic@sydney.com"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "Peter Parker",
+            "username": "peter",
+            "email": "peterparker@react.biz"
+        },
+        {
+            "id": 2,
+            "name": "John Cena",
+            "username": "john",
+            "email": "johncena@react.biz"
+        }
+    ],
+    "todos": [
+        {
+            "userId": 1,
+            "title": "Go to work",
+            "completed": false,
+            "id": 3
+        },
+        {
+            "userId": 1,
+            "title": "Write code",
+            "completed": false,
+            "id": 4
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Product 1",
+            "description": "Sản phẩm 1",
+            "img": "",
+            "type": "skincare"
+        },
+        {
+            "id": 2,
+            "name": "Product 2",
+            "description": "Sản phẩm 2",
+            "img": ""
+        },
+        {
+            "id": 3,
+            "name": "Product 3",
+            "description": "Sản phẩm 3",
+            "img": ""
+        }
+    ]
+}

@@ -1,0 +1,91 @@
++ Chạy nextjs bằng http:
+    >> npm run dev
++ Chạy nextjs bằng https:
+    >> npx next dev --experimental-https
+
+--------------------------------------------------------------------------------------
+
++ Cài package để giúp UI đẹp hơn:
+    >> npx shadcn@latest init
+
+    - Tải component:
+    >> npx shadcn@latest add button
+    >> npx shadcn@latest add form
+    >> npx shadcn@latest add input
+    >> npx shadcn@latest add toast
+    >> npx shadcn@latest add navigation-menu
+    >> npx shadcn@latest add toast
+
+--------------------------------------------------------------------------------------
+
++ Cài các package khác:
+    >> npm install @headlessui/react --legacy-peer-deps
+
+    Heroicons (cùng nhà phát triển với TailwindCSS);
+    >> npm install @heroicons/react --legacy-peer-deps
+
++ Cài TailwindCSS:
+    >> npm install -D tailwindcss postcss autoprefixer
+    >> npx tailwindcss init -p
+
+    Config Tailwind. Xem thêm:
+    https://nextjs.org/docs/app/building-your-application/styling/tailwind-css
+    https://200lab.io/blog/huong-dan-cai-dat-tailwind-css-co-ban/?srsltid=AfmBOor_ThGcDKKrUvnkSZObVuZdRelGTCyNMlH818gXFMeXzeaoDmzj
+
+    Tutorial:
+    https://www.youtube.com/watch?v=lCxcTsOHrjo
+
+--------------------------------------------------------------------------------------
+
++ Cài package để format code:
+    >> npm install prettier
+
+    Thêm script "prettier" vào package.json:
+    "scripts": {
+      "prettier": "npx prettier --write **/*.tsx"
+    },
+
+    Format tsx:
+    >> npm run prettier
+
+--------------------------------------------------------------------------------------
+
++ Tutorial Authentication :
+    https://www.youtube.com/watch?v=An20zqBLJvU
+
++ Cài package cookie (Client side):
+    >> npm install cookie ----legacy-peer-dep
+
++ Middleware không có sẵn, tự tạo file middleware.ts trong /src
+
++ API không có sẵn, tự tạo folder api (xem document Nextjs)
+
++ env không có sẵn, add thêm vào 'next.config.ts'
+    Cách dùng env: ${process.env.NEXT_PUBLIC_API_ENDPOINT}
+--------------------------------------------------------------------------------------
+
++ Call tới API Laravel:
+    - Gặp lỗi CSRF Token Mismatch
+    --> Except API khỏi CSRF Protection của Laravel:
+    --> Thêm đoạn này vào source Laravel (bootstrap/app.php)
+        $middleware->validateCsrfTokens(except: [
+            'api/csrf-cookie', // Laravel
+			'api/authentication', // Laravel
+            'https://localhost:3000/api/token' // Front-end URL
+		]);
+
+
+############################################################
+
+Setup localhost lần đầu: 
+>> npm install
+    Nếu lỗi, chạy lệnh:
+    >> npm install --force
+
+Lưu ý:
++ URL nextjs và Backend phải cùng là https
++ Code nextjs gồm có 2 phần : client & server
+
+
+
+

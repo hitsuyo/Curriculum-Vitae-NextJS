@@ -1,0 +1,17 @@
+- demo2, demo3, demo4: useState, useEffect
+- demo5: useState
+- demo6: useState, useReducer
+- demo7: useState, useEffect; axios
+- demo8: useRef
+- demo9: useLayoutEffect, useEffect, useRef
+- demo10: useRef, forwardRef, useImperativeHandle, useState
+- demo11: useState, createContext
+- demo12: useState, useEffect, useMemo
+- demo13: useCallback, useEffect
+
+
+
+----------------------------------------------------
+Bài tập:
+1. Tạo 1 chức năng Search cơ bản với axios, useState
+2. làm list danh sách lesson

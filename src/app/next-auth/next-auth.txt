@@ -1,0 +1,3 @@
+Sử dụng library NextAuth
+- https://next-auth.js.org/getting-started/example
+- Phù hợp cho project fullstack hơn, dự án gồm cả BE và FE.
