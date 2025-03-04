@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest --coverage",
+    "test:ci": "jest --ci",
     "lint": "next lint",
     "prettier": "npx prettier --write **/*.tsx"
   },
