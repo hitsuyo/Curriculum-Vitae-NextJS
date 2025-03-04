@@ -1,9 +1,11 @@
 "use client";
-import React, { createContext, useContext } from "react";
-import { AppContext } from "./page.tsx";
+import React, { useContext } from "react";
+// import { AppContext } from "./page.tsx"; // error
+import { AppContext } from "./ContextTutorial";
 
 function User() {
   const { username } = useContext(AppContext);
+
   return (
     <div>
       <h1 className="text-red-500">User: {username}</h1>

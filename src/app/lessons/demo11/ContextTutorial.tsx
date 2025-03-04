@@ -15,7 +15,7 @@ function ContextTutorial() {
   const [username, setUsername] = useState("");
 
   return (
-    <div className={styles.demo10}>
+    <div className={styles.demo11}>
       <AppContext.Provider value={{ username, setUsername }}>
         <Login /> <User />
       </AppContext.Provider>

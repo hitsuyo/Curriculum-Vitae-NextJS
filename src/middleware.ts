@@ -27,5 +27,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-    matcher: [...privatePaths, ...authPaths, ...logoutPaths]
+    // matcher: [...privatePaths, ...authPaths, ...logoutPaths]
+    matcher: ['/auth/me', '/auth/login', '/api/logout']
 }
