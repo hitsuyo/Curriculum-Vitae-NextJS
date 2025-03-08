@@ -1,3 +1,9 @@
+Mô tả project:
+
+Cấu trúc:
++ Từ NextJS version 13, Nextjs sử dụng App Directory Architecture (ADR) để quản lý tổ chức code.
++ Mỗi thư mục con đều chứa 1 file page.tsx
+
 + Chạy nextjs bằng http:
     >> npm run dev
 + Chạy nextjs bằng https:

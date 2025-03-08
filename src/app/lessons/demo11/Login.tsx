@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext } from "react";
-import { AppContext } from "./ContextTutorial";
+import { AppContext } from "./app";
 
 function Login() {
   const { setUsername } = useContext(AppContext);

@@ -26,9 +26,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Header() {
+export default async function Header() {
 
-  const authenticated = cookies().get("sessionToken");
+  const authenticated = (await cookies()).get("sessionToken");
   console.log("[Header] authenticated ?", authenticated);
 
   return (

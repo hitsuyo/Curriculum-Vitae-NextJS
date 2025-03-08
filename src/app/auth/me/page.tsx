@@ -9,7 +9,8 @@ import { useToast } from "@/hooks/use-toast"
  */
 
 async function fetchProfile() {
-  const cookieStore = cookies(); // hoặc await cookies()
+  // const cookieStore = cookies(); // hoặc await cookies()
+  const cookieStore = await cookies();
   const sessionToken = cookieStore.get("sessionToken");
 
   const result = await fetch(

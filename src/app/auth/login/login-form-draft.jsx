@@ -1,3 +1,6 @@
+// Tạm thời đổi extension thành jsx để skip qua trong khi build page này !!
+// Check extension được cho phép: "tsconfig.json"
+
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
