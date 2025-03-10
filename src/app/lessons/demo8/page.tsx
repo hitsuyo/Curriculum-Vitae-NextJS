@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import axios from "axios";
 
 /*
@@ -8,15 +8,25 @@ import axios from "axios";
 */
 
 function RefTutorial() {
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const [name, setName] = useState('')
+
+  inputRef.current?.focus()
 
   const changeName = () => {
-    inputRef.current.value = "";
+    if (inputRef.current) {
+      setName(inputRef.current.value)
+    }
+
+    /* Clear text box */
+    inputRef.current!.value = "";
   };
 
   return (
     <div>
       <h1>NextJS</h1>
+      <h5>Name: {name}</h5>
       <input type="text" placeholder="..." ref={inputRef} />
       <button onClick={changeName}>Change Name</button>
     </div>

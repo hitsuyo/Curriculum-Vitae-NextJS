@@ -9,20 +9,23 @@ import Child from "./Child";
 */
 
 export default function CallbackTutorial() {
-  const [data, setData] = useState("Learning NextJS");
   const [toggle, setToggle] = useState(false);
+  const [data, setData] = useState("Hello");
 
   const returnComment = useCallback(
-    (name) => {
+    (name: string) => {
       return data + " " + name;
     },
     [data],
   );
 
+  console.log(typeof returnComment)
+
   return (
     <div className="container mx-auto">
       <div className="bg-white py-5">
         <div className="App text-black">
+          <h1 className="pb-5">Demo 13</h1>
           <Child returnComment={returnComment} />
 
           <button
@@ -30,7 +33,7 @@ export default function CallbackTutorial() {
               setToggle(!toggle);
             }}
           >
-            {""}
+            {" "}
             Toggle
           </button>
           {toggle && <h1> toggle</h1>}

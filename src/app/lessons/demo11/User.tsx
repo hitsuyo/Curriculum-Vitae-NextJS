@@ -4,7 +4,13 @@ import React, { useContext } from "react";
 import { AppContext } from "./app";
 
 function User() {
-  const { username } = useContext(AppContext);
+  const context = useContext(AppContext);
+
+  if (!context) {
+    throw new Error('User must be used within an AppContext.Provider');
+  }
+
+  const { username, setUsername } = context;
 
   return (
     <div>

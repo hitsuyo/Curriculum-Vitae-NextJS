@@ -28,7 +28,8 @@ Cấu trúc:
     >> npm install @headlessui/react --legacy-peer-deps
 
     Heroicons (cùng nhà phát triển với TailwindCSS);
-    >> npm install @heroicons/react --legacy-peer-deps
+    >> npm install
+    >> npm install @heroicons/react (hoặc) npm install @heroicons/react --legacy-peer-deps
 
 + Cài TailwindCSS:
     >> npm install -D tailwindcss postcss autoprefixer
@@ -85,12 +86,22 @@ Cấu trúc:
 
 Setup localhost lần đầu: 
 >> npm install
-    Nếu lỗi, chạy lệnh:
-    >> npm install --force
+    Nếu lỗi "Fix the upstream dependency conflict, or retry npm error this command with --force or --legacy-peer-deps", chạy lệnh:
+    >> npm config set legacy-peer-deps true
+    Install lại:
+    >> npm install
 
 Lưu ý:
 + URL nextjs và Backend phải cùng là https
 + Code nextjs gồm có 2 phần : client & server
+
+--------------------------------------------------------------------------------------
+Setup DB mẫu:
+    Cài package:
+    >> npm install json-server
+
+    Khởi động db server:
+    >> npx json-server --watch db.json -p 3001
 
 
 

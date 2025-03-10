@@ -1,15 +1,16 @@
 {
     "json-server": [
         {
-            "cmd": "npx json-server --watch db.json --p 3001"
+            "cmd": "npx json-server --watch db.json -p 3001",
+            "example-api": "http://localhost:3001/api/json-server"
         }
     ],
-    "account-me": [
+    "api-account-me": [
         {
             "name": "Peter"
         }
     ],
-    "comments": [
+    "api-comments": [
         {
             "id": 1,
             "name": "id labore ex et quam laborum",
@@ -21,7 +22,7 @@
             "email": "Jayne_Kuhic@sydney.com"
         }
     ],
-    "users": [
+    "api-users": [
         {
             "id": 1,
             "name": "Peter Parker",
@@ -35,7 +36,7 @@
             "email": "johncena@react.biz"
         }
     ],
-    "todos": [
+    "api/todos": [
         {
             "userId": 1,
             "title": "Go to work",
@@ -49,7 +50,7 @@
             "id": 4
         }
     ],
-    "products": [
+    "api-products": [
         {
             "id": 1,
             "name": "Product 1",

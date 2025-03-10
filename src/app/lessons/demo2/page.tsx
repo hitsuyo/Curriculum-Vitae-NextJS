@@ -28,13 +28,18 @@ export default function Demo2() {
   //   productId: ""
   // };
 
+  interface Item {
+    id: number;
+    name: string;
+  }
+
   const [productType, setProductType] = useState(productId);
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
     // fetch(`http://localhost:3001/products/${productType}`)
     // fetch(`http://localhost:3001/${productType}`)
-    fetch(`http://localhost:3001/products?id=${productId}}`)
+    fetch(`http://localhost:3001/api-products?id=${productId}}`)
       .then((response) => response.json())
       .then((json) => setItems(json));
   }, [productId]);

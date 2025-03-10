@@ -12,12 +12,13 @@ export default function MemoTutorial() {
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/comments", {}).then((res) => {
-      setData(res.data);
-    });
+    axios.get("http://localhost:3001/api-comments", {})
+      .then((res) => {
+        setData(res.data);
+      });
   }, []); /* [] : tham số thứ 2 : [] nghĩa là chỉ cho phép gọi 1 lần */
 
-  const findLongestName = (comments) => {
+  const findLongestName = (comments: string | any[] | null) => {
     if (!comments) return null;
 
     let longestName = "";
@@ -46,7 +47,7 @@ export default function MemoTutorial() {
               setToggle(!toggle);
             }}
           >
-            {""}
+            {" "}
             Toggle
           </button>
           {toggle && <h1> toggle</h1>}

@@ -3,7 +3,13 @@ import React, { useContext } from "react";
 import { AppContext } from "./app";
 
 function Login() {
-  const { setUsername } = useContext(AppContext);
+  const context = useContext(AppContext);
+
+  if (!context) {
+    throw new Error('User must be used within an AppContext.Provider');
+  }
+
+  const { setUsername } = context;
 
   return (
     <div>

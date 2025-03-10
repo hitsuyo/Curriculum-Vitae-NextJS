@@ -22,7 +22,7 @@ const navigation = [
  * All components in Next 13 by default are server components **
  */
 
-function classNames(...classes) {
+function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");
 }
 

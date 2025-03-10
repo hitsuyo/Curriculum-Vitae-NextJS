@@ -9,10 +9,15 @@ import styles from "./Demo11.module.css";
     http://localhost:3000/lessons/demo11
 */
 
-export const AppContext = createContext(null);
+interface AppContextType {
+  username: string;
+  setUsername: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export const AppContext = createContext<AppContextType | null>(null);
 
 function ContextTutorial() {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState<string>("");
 
   return (
     <div className={styles.demo11}>

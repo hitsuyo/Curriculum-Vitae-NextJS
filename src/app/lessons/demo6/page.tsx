@@ -6,7 +6,7 @@ import React, { useState, useReducer } from "react";
  * http://localhost:3000/lessons/demo6
  */
 
-const reducer = (state, action) => {
+const reducer = (state: { count: number; showText: any; }, action: { type: any; }) => {
   switch (action.type) {
     case "INCREMENT":
       return { count: state.count + 1, showText: state.showText };

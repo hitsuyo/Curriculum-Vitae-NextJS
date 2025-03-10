@@ -25,7 +25,7 @@ export default async function Footer() {
       <p>{new Date().getFullYear()}</p>
 
       <nav>
-        <ul key="footer-navigation">
+        <ul key="0" className="footer-navigation">
           {navigationArr.map((navi) => (
             <li key={navi.get("id")}>
               <Link href='{navi.get("link")}'>{navi.get("label")}</Link>

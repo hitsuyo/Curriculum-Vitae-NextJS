@@ -24,7 +24,7 @@ const StateTutorial = () => {
 
   const [inputValue, setInputValue] = useState("Peter");
 
-  let changeValue = (event) => {
+  let changeValue = (event: { target: { value: any; }; }) => {
     const newValue = event.target.value;
     setInputValue(newValue);
   };

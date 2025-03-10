@@ -8,19 +8,22 @@ import axios from "axios";
 */
 
 function LayoutEffectTutorial() {
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  // const inputRef = useRef('');
 
   useLayoutEffect(() => {
-    console.log(inputRef.current.value);
+    console.log(inputRef.current?.value);
   }, []);
 
   useEffect(() => {
-    // inputRef.current.value = "Hello"
+    inputRef.current!.value = "Hello"
   }, []);
 
   return (
     <div className="App">
-      <input ref={inputRef} defaultValue="NextJS" style={{ width: 400 }} />
+      <div className="pb-5">
+        <input ref={inputRef} defaultValue="NextJS" style={{ width: 400, height: 100 }} />
+      </div>
     </div>
   );
 }

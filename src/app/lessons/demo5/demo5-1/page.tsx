@@ -12,9 +12,9 @@ const Demo5_1 = () => {
   // const [inputValue, setInputValue] = useState("Peter")
   const [outputValue, setOutputValue] = useState("Someone");
 
-  let changeSearchValue = (event) => {
+  let changeSearchValue = (event: { target: { value: string; }; }) => {
     axios
-      .get("http://localhost:3001/users?id=" + event.target.value)
+      .get("http://localhost:3001/api-users?id=" + event.target.value)
       .then((response) => {
         setOutputValue(response.data[0].name);
       })
